@@ -3,9 +3,14 @@ import "./Profile.css";
 
 function Profile(){
     return (
-        <div>
-            <h1>Perfil</h1>
+        <div className="background">
+            <h1>Oi</h1>
+        </div>,
+
+        <div className="name">
+            <h1>Nome Sobrenome</h1>
         </div>
+      
     );
 };
 
