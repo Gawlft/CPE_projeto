@@ -3,14 +3,16 @@
     flex-direction: column;
     align-items: center;
     flex-grow: 1;
+    position:relative;
+    top: 100px;
 }
 
 .base{
-    height: 80vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #386641;
+    background-color: #F2E8CF;
 }
 
 .inputs{
@@ -22,4 +24,13 @@
 
 .btn-custom{
     background-color: #DAAB37 !important;
+    font-weight: 700 !important;
+}
+
+.login-box{
+    border-radius: 5%;
+    background: #386641;
+    padding: 20px;
+    width: 54.82vw;;
+    height: 69.44vh;
 }
