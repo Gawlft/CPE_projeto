@@ -1,12 +1,13 @@
 import React from "react";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import Header from "../../Components/Header/Header"
 import "./Login.css";
-
 
 function Login(){
     return (
         <div className="base">
+            <Header/>
             <div className="login-box">
             <div className="container">
                 <img 
@@ -28,12 +29,9 @@ function Login(){
                 <p></p>
                 <Button className="btn-custom" variant="flat">Entrar</Button>{' '}
                 </div>
+                </div>
 
-            </div>
-            
-        </div>
-        
-        
+            </div>        
     );
 };
 export default Login;
