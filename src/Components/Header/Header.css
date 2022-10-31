@@ -1,14 +1,18 @@
 .container{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .navbar1{
   background-color: #F2E8CF !important;
+  flex-direction: row;
   font-size: 30px;
   align-items: center;
   width: 100vw;
   display: flex;
   flex-flow: row wrap;
-  justify-content: flex-start;
+  justify-content: space-between;
   gap: 2%;
   list-style-type: none;
   margin: 0;
@@ -23,6 +27,20 @@
   flex-flow: row wrap;
   justify-content: flex-start;
   color: black;
+}
+
+.buttons{
+  display: flex;
+  justify-content: flex-end;
+  gap: 4%;
+
+}
+
+.opts{
+  display: flex;
+  justify-content: flex-start;
+  width: 74%;
+  gap: 4%;
 }
 
 .login-bttn{

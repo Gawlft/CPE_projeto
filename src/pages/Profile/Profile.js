@@ -8,9 +8,11 @@ function Profile() {
         <div className="base">
             <Header />
             <div className="container">
+            </div>
                 <div className="usrname">
                     <h2>Nome Sobrenome</h2>
                     <div className="line">
+                    </div>
                     </div>
                         <div className="profilepic">
                             <img src="/images/rainha.jpg" alt="profile">
@@ -23,8 +25,6 @@ function Profile() {
                             <span></span>
                             <div className="info-line"></div>
                         </div>
-                    </div>
-                </div>
             </div>
 
 

@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Party from "./pages/Party";
+import Header from "./Components/Header";
 
 
 
@@ -18,6 +19,7 @@ function Def_routes(){
                 <Route path ="login" element = {<Login/>}/>
                 <Route path="register" element = {<Register/>}/>
                 <Route path= "party" element = {<Party/>}/>
+                <Route path= "header" element = {<Header/>}/>
             </Routes>
         </BrowserRouter>
     );
