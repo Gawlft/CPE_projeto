@@ -11,14 +11,21 @@ function Profile() {
                 <div className="usrname">
                     <h2>Nome Sobrenome</h2>
                     <div className="line">
+                    </div>
                         <div className="profilepic">
                             <img src="/images/rainha.jpg" alt="profile">
                             </img>
                         </div>
+                        <div className="info">
+                            <div className="info-line"></div>
+                            <span></span>
+                            <div className="info-line"></div>
+                            <span></span>
+                            <div className="info-line"></div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
 
 
