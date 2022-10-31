@@ -1,12 +1,52 @@
-.background{
-    display:flex;
-    flex-direction: column;
-    position: relative;
-    width: 100vw;
+
+.base{
     height: 100vh;
-    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(242, 232, 207, 0.41);
 }
 
-.name{
-    
+.container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    position:relative;
+    top: 100px;
 }
+
+
+.usrname{
+    height: 90vh;
+}
+
+.line{
+    width: 784.04px;
+    height: 0px;
+    left: 481px;
+    top: 245px;
+
+    border: 1px solid #000000;
+}
+
+.profilepic {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  
+
+/* .user {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+} */

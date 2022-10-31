@@ -1,23 +1,24 @@
 import React from "react";
-import Button from 'react-bootstrap/Button';
 import "./Header.css";
+import Button from 'react-bootstrap/Button';
+
 
 function Header() {
     return (
-        <div className="header">
-            <img
-                    src="/images/pol_icon 1.svg" alt="Plenta icon">
-            </img>
-            <Button variant="primary">Home</Button>{' '}
-            <Button variant="light">A Festa</Button>{' '}
-            <span></span>
-            {/* <div className="header-right">
-                <img
-                    src="/images/pol_icon 1.svg" alt="Plenta icon">
+        <div className= "container">
+        <ul className="navbar1">
+            <img 
+                    src= "/images/pol_icon 1.png" alt = "Login icon">
                 </img>
-                <Button variant="primary">Home</Button>{' '}
-                <Button variant="light">A Festa</Button>{' '}
-            </div> */}
+            <li><a href="http://localhost:3000/home">Home</a></li>
+            <li><a href="http://localhost:3000/party">A festa</a></li>
+
+        </ul>
+        <span></span>
+        <span></span>
+            <Button variant="secondary" className="register-bttn">Registre-se</Button>{' '}
+            <span></span>
+            <Button variant="success" className="login-bttn">Login</Button>{' '}
         </div>
     )
 };
