@@ -2,7 +2,10 @@ import React from "react";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Header from "../../Components/Header/Header"
+import Footer from "../../Components/Footer/Footer"
+
 import "./Login.css";
+
 
 function Login() {
     return (
@@ -30,6 +33,7 @@ function Login() {
                     <Button className="btn-custom" variant="flat">Entrar</Button>{' '}
             </div>
         </div>
+        <Footer/>
         </div>
 
 

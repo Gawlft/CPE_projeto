@@ -6,6 +6,16 @@
     top: 100%;
 }
 
+
+.login-box{
+    border-radius: 40px;
+    background: rgba(56, 102, 65, 0.8);;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .baseLogin{
     height: 70%;
     display: flex;
@@ -27,13 +37,4 @@
     font-weight: 700 !important;
     border-radius: 40px !important;
     width: 8vw;
-}
-
-.login-box{
-    border-radius: 40px;
-    background: rgba(56, 102, 65, 0.8);;
-    height: 70%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
