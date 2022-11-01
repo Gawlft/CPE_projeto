@@ -32,7 +32,8 @@
 .login-box{
     border-radius: 40px;
     background: rgba(56, 102, 65, 0.8);;
-    padding: 20px;
-    width: 54.82vw;
-    height: 80vh;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
