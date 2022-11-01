@@ -1,12 +1,29 @@
-.background{
-    display:flex;
+/* .festaContainer {
+    display: flex;
     flex-direction: column;
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    background: white;
+    align-items: center;
+    flex-grow: 1;
+    top: 100%;
+} */
+
+.festaMain {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 2vh;
+   
 }
 
-.name{
-    
+.eventButtons button {
+    width: 100%;
+    background-color: #386641;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1vh;
 }
