@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 
 function Header() {
     return (
-        <div className="container">
+        <div className="containerHeader">
             <ul className="navbar1">
                 <img
                     src="/images/pol_icon 1.png" alt="Login icon">

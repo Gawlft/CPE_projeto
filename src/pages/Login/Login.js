@@ -6,10 +6,10 @@ import "./Login.css";
 
 function Login(){
     return (
-        <div className="base">
+        <div className="baseLogin">
             <Header/>
             <div className="login-box">
-            <div className="container">
+            <div className="containerLogin">
                 <img 
                     src= "/images/login_icon.png" alt = "Login icon">
                 </img>
@@ -30,8 +30,9 @@ function Login(){
                 <Button className="btn-custom" variant="flat">Entrar</Button>{' '}
                 </div>
                 </div>
+                </div>
 
-            </div>        
+
     );
 };
 export default Login;
