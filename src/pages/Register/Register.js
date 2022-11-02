@@ -16,18 +16,30 @@ function Register(){
                         src="/images/login_icon.png" alt="Login icon">
                     </img>
                     <p></p>
-                    <Form className="inputs">
-                        <Form.Group className="mb-3" controlId="formBasicName">
-                        <Form.Label>Nome Completo</Form.Label>
+                    <Form className="inputsleft">
+                    <Form.Group className="mb-3" controlId="formBasicName">
+                        <Form.Control type="nome" placeholder="Nome Completo"/>
+                    </Form.Group>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Label>Email</Form.Label>
-                            </Form.Group>
-                            <Form.Group className="mb-3" controlId="formBasicPassword">
-                            <Form.Label>Senha</Form.Label>
-                            <Form.Control type="senha">
-                            </Form.Control>
-                            </Form.Group>
-                            </Form.Group>
+                        <Form.Control type="email" placeholder="E-mail"/>
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="formBasicNascimento">
+                        <Form.Control type="data" placeholder="Data de Nascimento"/>
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="formBasicAddress">
+                        <Form.Control type="endereço" placeholder="Endereço"/>
+                    </Form.Group>
+                    
+                    <Form.Group className="mb-3" controlId="formBasicBio">
+                        <Form.Control type="descrição" placeholder="Descrição do Usuário
+                        
+                        "/>
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="formBasicPassWord">
+                        <Form.Control type="senha" placeholder="Senha"/>
+                    </Form.Group>
+
+                    <Button className="btn-custom" variant="flat">Registre-se</Button>{' '}
 
                     </Form>
                 </div>
