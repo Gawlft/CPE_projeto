@@ -10,10 +10,10 @@ function Register() {
         <div>
             <Header />
             <div className="register-box">
-                <div className="grid-containerRegister">
-                    <img
+            <img
                         src="/images/login_icon.png" alt="Login icon">
                     </img>
+                <div className="grid-containerRegister">
                     <p></p>
                     <Form className="inputsLeft">
                         <Form.Group className="mb-3" controlId="formBasicName">
@@ -54,10 +54,17 @@ function Register() {
                                 <a href="#">Capeletti</a>
                             </div>
                         </div>
+                        <div className="dropdownAtt">
+                            <button class="dropbtnAtt">Atrações Favoritas</button>
+                            <div class="dropdown-contentAtt">
+                                <a href="#">Casa da Nonna</a>
+                                <a href="#">Tombo da Polenta</a>
+                                <a href="#">Paiol do Nonno</a>
+                            </div>
+                        </div>
                     </Form>
-                    <Button className="btn-custom" variant="flat">Registre-se</Button>{' '}
                 </div>
-
+                <Button className="btn-customRegister" variant="flat">Registre-se</Button>{' '}
             </div>
             <Footer />
         </div>
