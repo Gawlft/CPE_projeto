@@ -1,60 +1,102 @@
-.header{
-    padding: 60px;
-    text-align: center;
-    background: #1abc9c;
-    color: white;
-    font-size: 30px;
-    top:0px
-}
-
-.containerRegister{
+.register-box{
+    display: flex;
+    border-radius: 40px;
+    background: rgba(56, 102, 65, 0.8);
+    padding: 15px;
+    align-items: center;
+    width: 70%;
+    height: 70%;
+    flex-direction: column;
+};
+.grid-containerRegister{
     display:flex;
     flex-direction: column;
     align-items: center;
     flex-grow: 1;
-    position:relative;
-    top: 13px;
-}
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    top:100%
+};
 
-.base{
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(242, 232, 207, 0.41);;
-}
-
-.inputs{
-    width: 14vw !important;
+.inputsLeft{
+    width: 13vw !important;
     display: flex;
     flex-direction: column;
 
+    border-radius: 20px;
+    margin-right: 25%;
+
 }
 
-.inputs{
-    width: 12vw !important;
+.inputsRight{
+    width: 13vw !important;
     display: flex;
     flex-direction: column;
     border-radius: 50px;
-}
+    border-radius: 20px !important;
+    margin-right: 25%;
 
+}
 .btn-custom{
     background-color: #DAAB37 !important;
-    font-weight: 700 !important;
+    font-weight: 800 !important;
     border-radius: 40px !important;
-    width: 30vw;
-    align-items: center;
+    width: 15vw;
+    align-items: normal;
 }
 
-.register-box{
-    border-radius: 40px;
-    background: rgba(56, 102, 65, 0.8);;
-    padding: 15px;
-    align-items: center;
-    width: 100.100vw;;
-    height: 100.100vh;
-    height: 70%;
-    flex-direction: column;
-   
-    
+.baseRegister{
+    height: 100vh;
+    display: flex;
+    align-items: stretch;
+    justify-content: centers;
+    background-color: rgba(242, 232, 207, 0.41);;
 }
+
+.dropbtn {
+    background-color: #D9D9D9;
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5% 
+
+
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #D9D9D9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+
+  .dropdown-content a:hover {background-color: #f1f1f1}
+
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown:hover .dropbtn {
+    background-color: #D9D9D9;
+  }
