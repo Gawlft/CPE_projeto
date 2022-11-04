@@ -5,15 +5,15 @@
     flex-grow: 1;
     top: 100%;
 } */
-
+ 
 .festaMain {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     gap: 2vh;
-   
+ 
 }
-
+ 
 .eventButtons button {
     width: 100%;
     background-color: #386641;
