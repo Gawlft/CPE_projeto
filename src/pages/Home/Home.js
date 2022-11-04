@@ -1,22 +1,16 @@
 import React from "react";
 import "./Home.css";
-import {useNavigate } from "react-router-dom";
+import Header from "../../Components/Header/Header"
+import Footer from "../../Components/Footer/Footer"
 
 function Home(){
-    let  navigate  = useNavigate();
-    return (
-        <div>
-            <h1>Home</h1>
-            <button
-            onClick={() => {
-                navigate("/profile");
-                navigate.goBack();
-            }}
-            >
-                Profile
-            </button>
-        </div>
-    );
-};
+    return(
+      <div className= 'home-container'>
+        <img src= '/tombodapolenta.jpg'/>
+        <h1>FESTA DA POLENTA</h1>
+        <p>Desde 1979 fazendo historia</p>
 
+      </div>
+    )
+}
 export default Home;
