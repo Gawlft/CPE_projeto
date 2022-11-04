@@ -29,7 +29,11 @@ function Party() {
                 <h1>EstruturasFísicas</h1>
             </div>
             <div className="cozinhaBox">
+<<<<<<< HEAD
                 <img src= "/images/cozinha.png" alt="cozinha icon" width="400" height="300">
+=======
+                <img src= "/images/cozinha.png" alt="cozinha icon">
+>>>>>>> 1caad3101b50a7ec76028725487f422c8322f0c5
                 </img>
                 <div className="textocozinha">
                     <h2>Cozinha: onde bate o coração da festa</h2>
@@ -42,7 +46,11 @@ Em 2011, o prato típico passou para bandejas fechadas, mais higiênicas e céle
                 </div>
             </div>    
             <div className="tomboBox">
+<<<<<<< HEAD
                 <img src="/images/tombo.png" alt="tombo icon" width="400" height="300"> 
+=======
+                <img src="/images/tombo.png" alt="tombo icon"> 
+>>>>>>> 1caad3101b50a7ec76028725487f422c8322f0c5
                 </img>
                 <div className="texttombo">
                     <h2>O Tombo da Polenta</h2>
@@ -51,7 +59,11 @@ Em 2011, o prato típico passou para bandejas fechadas, mais higiênicas e céle
                 </div>
             </div>
             <div className="paiolBox">
+<<<<<<< HEAD
                 <img src="/images/paiol.png" alt="paiol icon"width="400" height="300"> 
+=======
+                <img src="/images/paiol.png" alt="paiol icon"> 
+>>>>>>> 1caad3101b50a7ec76028725487f422c8322f0c5
                 </img>
                 <div className="textopaiol">
                     <h2>Paiol do Nonno</h2>
@@ -59,7 +71,11 @@ Em 2011, o prato típico passou para bandejas fechadas, mais higiênicas e céle
                 </div>
             </div>
             <div className="historiasBox">
+<<<<<<< HEAD
                 <img src="/images/casa da nonna.png" alt="casa icon" width="400" height="300"> 
+=======
+                <img src="/images/casa da nonna.png" alt="casa icon"> 
+>>>>>>> 1caad3101b50a7ec76028725487f422c8322f0c5
                 </img>
                 <div className="textohistorias">
                     <h2>Casa da Nonna: Histórias, bordados e quitudes</h2>
@@ -82,25 +98,41 @@ Ferramentas como machado, “grupião”, foice e cangalha faziam parte da rotin
             <div className="culinariaDivisoes">
                 <div className="polentaBox">
                     <h3>Polenta</h3>
+<<<<<<< HEAD
                     <img src="/images/polenta frita.png" alt="polenta icon" width="305" height="305"> 
+=======
+                    <img src="/images/polenta frita.png" alt="polenta icon"> 
+>>>>>>> 1caad3101b50a7ec76028725487f422c8322f0c5
                     </img>
                     <h6>A polenta é o principal prato típico da Festa, seja frita, com molho, com ovo, com queijo, com linguiça e outras formas de se apreciar a saborosa iguaria, feita em fogões à lenha com cozimento lento para não queimar e dar paladar</h6>
                 </div>
                 <div className="macarraoBox">
                     <h3>Macarrão</h3>
+<<<<<<< HEAD
                     <img src="/images/macarrao.png" alt="macarrao icon" width="305" height="305"> 
+=======
+                    <img src="/images/macarrao.png" alt="macarrao icon"> 
+>>>>>>> 1caad3101b50a7ec76028725487f422c8322f0c5
                     </img>
                     <h6>Também se aprecia um bom macarrão, cozido “al dente” e temperado de forma artesanal, nas versões molho de carne e queijo parmesão e ao "fungui".</h6>
                 </div>
                 <div className="linguiçaBox">
                     <h3>Linguiça</h3>
+<<<<<<< HEAD
                     <img src="/images/linguiça.png" alt="linguiça icon" width="305" height="305"> 
+=======
+                    <img src="/images/linguiça.png" alt="linguiça icon"> 
+>>>>>>> 1caad3101b50a7ec76028725487f422c8322f0c5
                     </img>
                     <h6>A linguiça suína é preparada do mesmo modo que nossos "Nonnos" nos ensinaram, bem como o frango frito que é temperado com muito carinho</h6>
                 </div>
                 <div className="capelletiBox">                 
                     <h3>Capelleti</h3>
+<<<<<<< HEAD
                     <img src="/images/capelleti.png" alt="capelleti icon" width="305" height="305"> 
+=======
+                    <img src="/images/capelleti.png" alt="capelleti icon"> 
+>>>>>>> 1caad3101b50a7ec76028725487f422c8322f0c5
                     </img>
                     <h6>O capeletti, ou agnoline é uma iguaria fina que revigora as forças após uma jornada de boa festa.
 Temos diversas outras porções que agregam sabor ao paladar dos visitantes como um bom queijo, molhos, frango e outros quitutes encontrados no paiol do “Nonno” e na casa da “Nonna", tais como o "socol" e pães caseiros.</h6>
