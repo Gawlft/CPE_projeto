@@ -8,7 +8,7 @@ function Home(){
     return(
       <div> 
         <div className= 'home-container'>
-        <img src= '/tombodapolenta.jpg'/>
+        {/* <img src= '/tombodapolenta.jpg'/> */}
         <h1>FESTA DA POLENTA</h1>
         <p>Desde 1979 fazendo historia</p>
       </div>
