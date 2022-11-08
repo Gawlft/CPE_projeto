@@ -2,27 +2,25 @@
     display:flex;
     flex-direction: column;
     align-items: center;
-    flex-grow: 1;
-    top: 100%;
-}
-
-
-.login-box{
-    border-radius: 40px;
-    background: rgba(56, 102, 65, 0.8);
-    height: 70%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-evenly;
 }
 
 .baseLogin{
-    height: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.loginBox{
+    border-radius: 4%;
+    background: rgba(56, 102, 65, 0.8);
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-    background-color: rgba(242, 232, 207, 0.41);
+    width: 38vw;
+    height: 60vh;
+
 }
 
 .inputs{
