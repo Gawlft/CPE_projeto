@@ -44,7 +44,7 @@ function Register() {
                         <Form.Group className="mb-3" controlId="formBasicPassWord">
                             <Form.Control type="senha" placeholder="Senha" />
                         </Form.Group>
-
+                    
                         <div className="dropdown">
                             <button class="dropbtn">Comidas Favoritas</button>
                             <div class="dropdown-content">
@@ -54,6 +54,7 @@ function Register() {
                                 <a href="#">Capeletti</a>
                             </div>
                         </div>
+
                         <div className="dropdownAtt">
                             <button class="dropbtnAtt">Atrações Favoritas</button>
                             <div class="dropdown-contentAtt">
