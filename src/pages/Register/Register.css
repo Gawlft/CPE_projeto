@@ -1,56 +1,68 @@
+
 .register-box{
     display: flex;
+    justify-content: center;
+    align-items:center;
     border-radius: 40px;
     background: rgba(56, 102, 65, 0.8);
-    padding: 15px;
-    align-items: center;
+    padding: 20px;
     width: 70%;
-    height: 70%;
+    height: 60%;
     flex-direction: column;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 5%);
+    gap: 1vw;
+    
 }
 .grid-containerRegister{
     flex-direction: column;
-    align-items: center;
+    align-items:center;
     flex-grow: 1;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    grid-template-columns: 1fr 1fr ;
     grid-gap: 10px;
-    top:100%;
-    justify-content: content;   
+    justify-content: center;  
+    grid-template-columns: 30vw; 
 }
 
 .inputsLeft{
-    width: 16vw !important;
+    width: 25vw !important;
     display: grid;
     flex-direction: column;
     border-radius: 20px;
-    margin-right: 25%;
-
+    margin: auto;
+    gap: 0.5vw;
+    scroll-padding: 20px;
 }
 
 .inputsRight{
-    width: 16vw !important;
-    display: flex;
+    width: 25vw !important;
+    display: grid;
     flex-direction: column;
     border-radius: 20px !important;
-    margin-right: 25%;
+    margin:auto;
+    gap: 0.5vw;
 
 }
 .btn-customRegister{
     background-color: #DAAB37 !important;
     font-weight: 800 !important;
     border-radius: 40px !important;
-    width: 15vw;
-    align-items: normal;
+    width: 14vw;
+    height: 4vw;
+    align-items: center;
 }
 
 .baseRegister{
     height: 100vh;
     display: flex;
     align-items: stretch;
-    justify-content: centers;
-    background-color: rgba(242, 232, 207, 0.41);;
+    justify-content: center;
+    background-color: rgba(242, 232, 207, 0.41);
 }
+
 
 .dropbtn {
     background-color: #D9D9D9;
@@ -59,8 +71,9 @@
     font-size: 16px;
     border: none;
     cursor: pointer;
-    border-radius: 5% 
-
+    border-radius: 40px; 
+    width: 16vw;
+  
 
   }
 
@@ -107,9 +120,8 @@
     font-size: 16px;
     border: none;
     cursor: pointer;
-    border-radius: 5% 
-
-
+    border-radius: 40px; 
+    width: 16vw;
   }
 
   .dropdownAtt:hover {

@@ -9,9 +9,12 @@ import "./Login.css";
 
 function Login() {
     return (
-        <div className="baseLogin">
+        <div>
             <Header/>
-            <div className="login-box">
+            <p></p>
+
+            <div className="baseLogin">
+            <div className="loginBox">
                 <div className="containerLogin">
                     <img
                         src="/images/login_icon.png" alt="Login icon">
@@ -32,7 +35,9 @@ function Login() {
                     <p></p>
                     <Button className="btn-custom" variant="flat">Entrar</Button>{' '}
             </div>
+            </div>
         </div>
+        <p></p>
         <Footer/>
         </div>
 
