@@ -1,0 +1,39 @@
+.footerBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-content: center;
+    gap: 6vw;
+}
+.divisoesfooterBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-content: center;
+    gap: 1vw;
+}
+.midiaBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-content: center;
+    gap: 2vw;
+
+}
+@media screen and (max-width:960px){
+    .home-container > h1 {
+        font-size: 70px;
+        margin-top: -150px;
+
+}
+}
+@media screen and (max-width:768px) {
+    .home-container > h1 {
+        font-size: 50px;
+        margin-top: -1500px;
+
+}
+    .home-container > p {
+        font-size: 30px ;
+    }
+}
