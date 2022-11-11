@@ -9,7 +9,7 @@ exports.up = function(knex) {
     table.string('email').primary().notNullable();
     table.datetime('birthdate').primary().notNullable();
     table.string('address').primary().notNullable();
-    table.string('bio').primary().notNullable();
+    table.string('description').primary().notNullable();
   });
 };
 
