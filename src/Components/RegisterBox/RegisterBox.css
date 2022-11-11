@@ -4,7 +4,7 @@
       align-items:center;
       border-radius: 40px;
       background: rgba(56, 102, 65, 0.8);
-      /* padding: 20px; */
+      padding: 30px; 
       width: 60%;
       /* height: 40%; */
       flex-direction: column;
@@ -20,6 +20,7 @@
       /* grid-gap: 10px; */
       justify-content: center;  
       /* grid-template-columns: 30vw;  */
+      padding: 1vw;
   }
   
   .inputsLeft{
@@ -46,9 +47,10 @@
       font-weight: 800 !important;
       border-radius: 40px !important;
       width: 14vw;
-      height: 4vw;
+      height: 3vw;
       align-items: center;
-  }
+
+}
   
   .baseRegister{
       height: 100vh;
