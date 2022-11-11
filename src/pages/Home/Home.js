@@ -6,13 +6,15 @@ import Cards from "../../Components/Cards";
 
 function Home(){
     return(
-      <div> 
+      <div>
+        <Header/>
         <div className= 'home-container'>
         {<img src= '/tombodapolenta.jpg'/>}
         <h1>FESTA DA POLENTA</h1>
         <p>Desde 1979 fazendo historia</p>
       </div>
       <Cards/>
+      <Footer/>
       </div>
     )
 }
