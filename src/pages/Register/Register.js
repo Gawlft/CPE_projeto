@@ -7,7 +7,7 @@ import RegisterBox from "../../Components/RegisterBox/RegisterBox";
 
 function Register() {
     return (
-        <div>
+        <div className="registerPage">
             <Header />
             <div className="registerContainer">
                 <RegisterBox/>
