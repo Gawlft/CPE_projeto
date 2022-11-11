@@ -2,7 +2,7 @@ import React from "react";
 import "./Home.css";
 import Header from "../../Components/Header/Header"
 import Footer from "../../Components/Footer/Footer"
-import Cards from "../../Components/Cards";
+import Cards from "../../Components/Cards/Cards";
 
 function Home(){
     return(
