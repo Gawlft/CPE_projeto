@@ -9,7 +9,7 @@ import "./Login.css";
 
 function Login() {
     return (
-        <div classname="loginPage">
+        <div className="loginPage">
             <Header/>
             <div className="baseLogin">
             <div className="loginBox">

@@ -33,15 +33,15 @@
 .buttons{
   display: flex;
   justify-content: flex-end;
-  gap: 4%;
+  gap: 50px;
 
 }
 
 .opts{
   display: flex;
   justify-content: flex-start;
-  width: 74%;
-  gap: 4%;
+  width: calc(95% - 489px);
+  gap: 50px;
 }
 
 .login-bttn{
