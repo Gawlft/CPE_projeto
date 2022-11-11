@@ -9,10 +9,8 @@ import "./Login.css";
 
 function Login() {
     return (
-        <div>
+        <div classname="loginPage">
             <Header/>
-            <p></p>
-
             <div className="baseLogin">
             <div className="loginBox">
                 <div className="containerLogin">
@@ -37,9 +35,9 @@ function Login() {
             </div>
             </div>
         </div>
-        <p></p>
         <Footer/>
         </div>
+
 
 
     );
