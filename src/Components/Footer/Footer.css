@@ -1,22 +1,33 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+
+body{
+    height: 100vh;
+    background-color: #F2E8CF;
+    }
+
 .footerBox{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    justify-content: center;
-    gap: 6vw;
+    justify-content: space-around;
+    padding-left: 80px;
+    padding-right: 80px;
+    height: 182px;
+    background-color: #F2E8CF;
 }
 .divisoesfooterBox{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    justify-content: center;
-    gap: 1vw;
+    height:100%;
 }
 .midiaBox{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    justify-content: center;
     gap: 2vw;
 
 }
