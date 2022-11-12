@@ -4,6 +4,7 @@ import logo from './logo.svg';
 import Routes from "./routes";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './global.css';
+import './routes.js'
 
 
 function App() {
