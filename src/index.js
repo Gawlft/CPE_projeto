@@ -7,8 +7,6 @@ import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-const routes = require('./routes');
-
 
 root.render(
   <React.StrictMode>

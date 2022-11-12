@@ -7,14 +7,6 @@ import Register from "./pages/Register";
 import Party from "./pages/Party";
 import Header from "./Components/Header";
 
-const routes = express.Router();
-routes.get('/home', (req, res) => {
-    console.log(req);
-    res.send("oi");
-});const express = require('express');
-
-
-
 function Def_routes(){
     return (
         <BrowserRouter>
@@ -29,7 +21,5 @@ function Def_routes(){
         </BrowserRouter>
     );
 };
-
-module.exports = routes;
 
 export default Def_routes;
