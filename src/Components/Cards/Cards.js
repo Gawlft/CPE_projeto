@@ -22,23 +22,23 @@ function Cards() {
           </ul>
           <ul className='cards__items'>
             <CardItem
-              src='images/Desfile.jpg'
+              src='images/desfile.jpg'
               text= ' Desfile (2016) '
               
             />
             <CardItem
-              src='images/danca.jpg'
-              text='Festival de dança (2015)'
+              src='images/festa.jpg'
+              text='Publico Festival (2015)'
               
             />
             <CardItem
-              src='images/Panelaco.jpg'
-              text= "Panelaço (2014)"
+              src='images/grupodedanca.jpg'
+              text= "Grupo de Dança Típico (2014)"
               
             />
              <CardItem
-              src='images/Panelaco.jpg'
-              text= "Panelaço (2014)"
+              src='images/publico.jpg'
+              text= "Tombo da Polenta (2014)"
               
             />
           </ul>
