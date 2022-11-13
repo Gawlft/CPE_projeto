@@ -5,20 +5,23 @@ module.exports = {
     async create(favoriteProd) {
         const favoriteProd_id = uuidv4();
         favoriteProd.favoriteProd_id = favoriteProd_id;
-        const result = await connection("favoriteProd").insert(favoriteProd);
+        const result = await connection("favoriteProduct").insert(favoriteProd);
         return result;
     },
-    async getById({ favoriteProd_id, user_id }) {
-        const result = await connection("favoriteProd").where({ favoriteProd_id, user_id }).select("*");
+    async getById({ favoriteProduct_id, user_id }) {
+        const result = await connection("favoriteProduct").where({ favoriteProduct_id, user_id }).select("*").first();
         return result;
 
     },
-    async updateById({favoriteProd_id, favoriteProd}){
-        const result = await connection("favoriteProd").where(favoriteProd_id_id).update(favoriteProd);
-        return result;
+    async getByUserWithFilters(user_id){
+        const result = await connection("favoriteProduct")
+            .innerJoin("product", "product.product_id", "favoriteProduct.product_id")
+            .where({"favoriteProdudct.user_id":user_id})
+            .select("product.name", "product.description");
+            return result;
     },
     async deleteById(favoriteProd_id){
-        const result = await connection("favoriteProd").where({favoriteProd_id}).delete();
+        const result = await connection("favoriteProduct").where({favoriteProd_id}).delete();
         return result;
     }
 }
