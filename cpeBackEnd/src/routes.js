@@ -41,12 +41,8 @@ routes.post("/favoriteProduct", FavProdValidator.create,  auth.authenticateToken
 routes.delete("/favoriteProduct/:favorite_id", FavProdValidator.delete ,FavProdController.delete);
 
 
-routes.get("/favorito/:user_id", FavProdValidator.getById, auth.authenticateToken, FavProdController.getById);
-routes.post("/favorito", FavProdValidator.create,  auth.authenticateToken, FavProdController.create);
-routes.delete("/favorito/:favorito_id", FavProdValidator.delete ,FavProdController.delete);
-
-
-
-
+routes.get("/favoriteAtt/:user_id", FavAttValidator.getById, auth.authenticateToken, FavAttController.getById);
+routes.post("/favoriteAtt", FavAttValidator.create,  auth.authenticateToken, FavAttController.create);
+routes.delete("/favoriteAtt/:favoriteAtt_id", FavAttValidator.delete ,FavAttController.delete);
 
 module.exports = routes;

@@ -5,7 +5,7 @@
 exports.up = function(knex) {
     return knex.schema.createTable('favoriteProduct', function(table){
         table.string('user_id').primary().notNullable();
-        table.string('products_id').primary().notNullable();
+        table.string('favoriteProduct_id').primary().notNullable();
 });
 };
 
