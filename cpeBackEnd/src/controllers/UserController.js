@@ -2,8 +2,6 @@ const { response } = require("express");
 const UserModel = require("../models/UserModel");
 
 
-const users = [];
-
 module.exports = {
     async create(request, response){
         try{
