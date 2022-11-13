@@ -1,5 +1,5 @@
 const {v4 : uuidv4} = require ('uuid');
-const connection = require(".../database/connection");
+const connection = require("../database/connection");
 
 module.exports = {
     async create(attraction) {
@@ -21,4 +21,4 @@ module.exports = {
         const result = await connection("attraction").where({attraction_id}).delete();
         return result;
     }
-}
+};
