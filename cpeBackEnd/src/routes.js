@@ -11,10 +11,10 @@ const AttractionController = require("./controllers/AttractionController");
 const AttractionValidator = require("./validators/AttractionValidator");
 
 const FavProdController = require("./controllers/FavProdController");
-const FavProdController = require("./validators/FavProdValidator");
+const FavProdValidator = require("./validators/FavProdValidator");
 
 const FavAttController = require("./controllers/FavAttController");
-const FavAttController = require("./validators/FavAttValidator");
+const FavAttValidator = require("./validators/FavAttValidator");
 
 const SessionController = require("./controllers/SessionController");
 const auth = require("./middlewares/authentication")
@@ -26,15 +26,15 @@ routes.post("/user", UserValidator.create, UserController.create);
 routes.put("/user/:user_id", UserValidator.update, UserController.update);
 routes.delete("/user/:user_id", UserValidator.delete, UserController.delete);
 
-routes.get("/product/:product_id", productValidator.getById, productController.getById);
-routes.post("/product", productValidator.create, productController.create);
-routes.put("/product/:product_id", productValidator.update, productController.update);
-routes.delete("/product/:product_id", productValidator.delete, productController.delete);
+routes.get("/product/:product_id", ProductValidator.getById, ProductController.getById);
+routes.post("/product", ProductValidator.create, ProductController.create);
+routes.put("/product/:product_id", ProductValidator.update, ProductController.update);
+routes.delete("/product/:product_id", ProductValidator.delete, ProductController.delete);
 
-routes.get("/attraction/:attraction_id", attractionValidator.getById, attractionController.getById);
-routes.post("/attraction", attractionValidator.create, attractionController.create);
-routes.put("/attraction/:attraction_id", attractionValidator.update, attractionController.update);
-routes.delete("/attraction/:attraction_id", attractionValidator.delete, attractionController.delete);
+routes.get("/attraction/:attraction_id", AttractionValidator.getById, AttractionController.getById);
+routes.post("/attraction", AttractionValidator.create, AttractionController.create);
+routes.put("/attraction/:attraction_id", AttractionValidator.update, AttractionController.update);
+routes.delete("/attraction/:attraction_id", AttractionValidator.delete, AttractionController.delete);
 
 routes.get("/favoriteProd/:user_id", FavProdValidator.getById, auth.authenticateToken, FavProdController.getById);
 routes.post("/favoriteProd", FavProdValidator.create,  auth.authenticateToken, FavProdController.create);
