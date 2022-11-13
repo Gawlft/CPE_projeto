@@ -2,14 +2,14 @@ const { response } = require("express");
 const AttractionModel = require("../models/AttractionModel");
 
 
-const attractions = [];
+const attraction = [];
 
 module.exports = {
     async create(request, response){
         try{
-            const attraction = request.body;
+            const newAttraction = request.body;
 
-            const result = await AttractionModel.create(attraction);
+            const result = await AttractionModel.create(newAttraction);
             return response.status(200).json(result)
         } catch (err) {
           console.log ("Attraction creation failed: "+ err);
@@ -21,7 +21,7 @@ module.exports = {
     async getById(request, response) {
         try{
             const {attraction_id} = request.params;
-            const result = await Attraction.getById(attraction_id);
+            const result = await AttractionModel.getById(attraction_id);
 
             return response.status(200).json(result);
         }catch(err){
@@ -31,11 +31,11 @@ module.exports = {
           });
         }
     },
-    async uptade(request, respose){
+    async uptade(request, response){
         try{
             const {attraction_id} = request.params;
-            const attraction = request.body;
-            const result = await AttractionModel.updateById(attraction_id, attraction)
+            const newAttraction = request.body;
+            const result = await AttractionModel.updateById(attraction_id, newAttraction)
 
             return response.status(200).json(result);
         }catch (err){
@@ -45,11 +45,11 @@ module.exports = {
             });
         }
     },
-    async delete(request, respose){
+    async delete(request, response){
         try{
             const {attraction_id} = request.params;
 
-            const result =await AttractionModel.deleteById(attraction_id);
+            const result = await AttractionModel.deleteById(attraction_id);
             return response.status(200).json(result);
         }catch(err){
             console.log("Attraction delete failed: " + err);

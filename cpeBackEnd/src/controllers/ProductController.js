@@ -2,7 +2,7 @@ const { response } = require("express");
 const ProductModel = require("../models/ProductModel");
 
 
-const products = [];
+const product = [];
 
 module.exports = {
     async create(request, response){
@@ -21,7 +21,7 @@ module.exports = {
     async getById(request, response) {
         try{
             const {product_id} = request.params;
-            const result = await Product.getById(product_id);
+            const result = await ProductModel.getById(product_id);
 
             return response.status(200).json(result);
         }catch(err){

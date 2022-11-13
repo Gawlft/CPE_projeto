@@ -7,9 +7,9 @@ const users = [];
 module.exports = {
     async create(request, response){
         try{
-            const user = request.body;
+            const newUser = request.body;
 
-            const result = await UserModel.create(user);
+            const result = await UserModel.create(newUser);
             return response.status(200).json(result)
         } catch (err) {
           console.log ("User creation failed: "+ err);
@@ -21,7 +21,7 @@ module.exports = {
     async getById(request, response) {
         try{
             const {user_id} = request.params;
-            const result = await User.getById(user_id);
+            const result = await UserModel.getById(user_id);
 
             return response.status(200).json(result);
         }catch(err){
@@ -31,11 +31,11 @@ module.exports = {
           });
         }
     },
-    async uptade(request, respose){
+    async uptade(request, response){
         try{
             const {user_id} = request.params;
-            const user = request.body;
-            const result = await UserModel.updateById(user_id, user)
+            const newUser = request.body;
+            const result = await UserModel.updateById(user_id, newUser)
 
             return response.status(200).json(result);
         }catch (err){
@@ -45,11 +45,11 @@ module.exports = {
             });
         }
     },
-    async delete(request, respose){
+    async delete(request, response){
         try{
             const {user_id} = request.params;
 
-            const result =await UserModel.deleteById(user_id);
+            const result = await UserModel.deleteById(user_id);
             return response.status(200).json(result);
         }catch(err){
             console.log("User delete failed: " + err);
