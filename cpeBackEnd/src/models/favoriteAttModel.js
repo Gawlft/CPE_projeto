@@ -20,8 +20,8 @@ module.exports = {
             .select("attraction.name", "attraction.description");
             return result;
     },
-    async deleteById(favoriteProd_id){
-        const result = await connection("favoriteAtt").where({favoritefavoriteAtt_id}).delete();
+    async deleteById(favoriteAtt_id){
+        const result = await connection("favoriteAtt").where({favoriteAtt_id}).delete();
         return result;
     }
 }
