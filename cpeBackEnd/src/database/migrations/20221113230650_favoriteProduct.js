@@ -2,7 +2,7 @@
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
  */
-exports.up = function(knex) {
+ exports.up = function(knex) {
     return knex.schema.createTable("favoriteProd", function(table){
         table.string("favoriteProd_id").primary().notNullable();
         table.string("user_id").notNullable();
