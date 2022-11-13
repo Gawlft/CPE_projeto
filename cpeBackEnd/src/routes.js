@@ -2,22 +2,22 @@ const express = require("express");
 const routes = express.Router();
 
 const UserController = require("./controllers/UserController");
-//const UserValidator = require("./validators/UserValidator");
+const UserValidator = require("./validators/UserValidator");
 
 const ProductController = require("./controllers/ProductController");
-//const ProductValidator = require("./validators/ProductValidator");
+const ProductValidator = require("./validators/ProductValidator");
 
 const AttractionController = require("./controllers/AttractionController");
-//const AttractionValidator = require("./validators/AttractionValidator");
+const AttractionValidator = require("./validators/AttractionValidator");
 
 const FavProdController = require("./controllers/FavProdController");
-//const FavProdController = require("./validators/FavProdValidator");
+const FavProdController = require("./validators/FavProdValidator");
 
 const FavAttController = require("./controllers/FavAttController");
-//const FavAttController = require("./validators/FavAttValidator");
+const FavAttController = require("./validators/FavAttValidator");
 
 const SessionController = require("./controllers/SessionController");
-//const auth = require("./middlewares/authentication")
+const auth = require("./middlewares/authentication")
 
 routes.post("/login", SessionController.signIn);
 
