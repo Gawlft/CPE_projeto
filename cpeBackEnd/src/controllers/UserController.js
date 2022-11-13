@@ -35,7 +35,7 @@ module.exports = {
         try{
             const {user_id} = request.params;
             const user = request.body;
-            const result = await User.Model.updateById(user_id, user)
+            const result = await UserModel.updateById(user_id, user)
 
             return response.status(200).json(result);
         }catch (err){
