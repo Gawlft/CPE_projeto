@@ -3,7 +3,7 @@
  * @returns { Promise<void> }
  */
 exports.up = function(knex) {
-    return knex.schema.createTable('fav_products', function(table){
+    return knex.schema.createTable('favoriteProduct', function(table){
         table.string('user_id').primary().notNullable();
         table.string('products_id').primary().notNullable();
 });
@@ -14,5 +14,5 @@ exports.up = function(knex) {
  * @returns { Promise<void> }
  */
 exports.down = function(knex) {
-    return knex.schema.dropTable('fav_products');
+    return knex.schema.dropTable('favoriteProduct');
 };
