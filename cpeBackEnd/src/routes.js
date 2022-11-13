@@ -36,9 +36,9 @@ routes.post("/attraction", attractionValidator.create, attractionController.crea
 routes.put("/attraction/:attraction_id", attractionValidator.update, attractionController.update);
 routes.delete("/attraction/:attraction_id", attractionValidator.delete, attractionController.delete);
 
-routes.get("/favoriteProduct/:user_id", FavProdValidator.getById, auth.authenticateToken, FavProdController.getById);
-routes.post("/favoriteProduct", FavProdValidator.create,  auth.authenticateToken, FavProdController.create);
-routes.delete("/favoriteProduct/:favorite_id", FavProdValidator.delete ,FavProdController.delete);
+routes.get("/favoriteProd/:user_id", FavProdValidator.getById, auth.authenticateToken, FavProdController.getById);
+routes.post("/favoriteProd", FavProdValidator.create,  auth.authenticateToken, FavProdController.create);
+routes.delete("/favoriteProd/:favorite_id", FavProdValidator.delete ,FavProdController.delete);
 
 
 routes.get("/favoriteAtt/:user_id", FavAttValidator.getById, auth.authenticateToken, FavAttController.getById);
