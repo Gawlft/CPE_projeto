@@ -1,5 +1,5 @@
 const Firebase = require("../utils/Firebase");
-const User = require("../models/UserModel");
+const UserModel = require("../models/UserModel");
 const jwt = require("jsonwebtoken");
 
 module.exports = {
@@ -13,14 +13,14 @@ module.exports = {
             catch (error){
                 return response.status(403).json({notification: "Invalid credentials"});
             }
-            const user = await User.getByFields({firebase_id: uid});
+            const user = await UserModel.getByFields({firebase_id: uid});
             const AccessToken = jwt.sign({ user }, process.env.ACCESS_TOKEN_SECRET, {
-                expiresIn: "1h",
+                expiresIn: "30d",
             });
-
             return response.status(200).json({user , AccessToken});
         }
         catch(error){
+            console.warn(error)
             return response.status(500).json({notification: "Error while trying to validate credentials"});
         }
     }

@@ -1,5 +1,6 @@
 const express = require("express");
 const routes = express.Router();
+const auth = require("./middlewares/authentication");
 
 const UserController = require("./controllers/UserController");
 const UserValidator = require("./validators/UserValidator");
@@ -17,7 +18,6 @@ const FavAttController = require("./controllers/FavAttController");
 const FavAttValidator = require("./validators/FavAttValidator");
 
 const SessionController = require("./controllers/SessionController");
-const auth = require("./middlewares/authentication")
 
 routes.post("/login", SessionController.signIn);
 
