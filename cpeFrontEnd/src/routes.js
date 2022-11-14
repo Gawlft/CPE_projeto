@@ -1,5 +1,5 @@
 import React from "react";
-import {BrowserRouter, Route, Routes, Navigate} from "react-router-dom";
+import {BrowserRouter, Route, Routes, Navigate, Link, Outlet} from "react-router-dom";
 import Profile from "./pages/Profile";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
@@ -8,26 +8,22 @@ import Party from "./pages/Party";
 import Header from "./Components/Header";
 import { isAuthenticated } from "./services/auth";
 
-const PrivateRoute = ({ component: Component, ...rest }) => (
-    <Route
-      {...rest}
-      render={props =>
-        isAuthenticated() ? (
-          <Component {...props} />
-        ) : (
-          <Navigate to={{ pathname: "/login", state: { from: props.location } }} />
-        )
-      }
-    />
-  );
+const PrivateRoute = ({redirectPath = '/login' }) => {
+  if (!isAuthenticated()) {
+    return <Navigate to={redirectPath} replace />;
+  }
 
+  return <Outlet />;
+};
 
 
 function Def_routes(){
     return (
         <BrowserRouter>
             <Routes>
-                <PrivateRoute path ="profile" element = {<Profile/>}/>
+                <Route element = {<PrivateRoute/>}>
+                  <Route path ="profile" element= {<Profile/>}/>
+                </Route>
                 <Route path ="home" element = {<Home/>}/>
                 <Route path ="login" element = {<Login/>}/>
                 <Route path="register" element = {<Register/>}/>

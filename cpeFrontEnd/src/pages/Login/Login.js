@@ -20,8 +20,8 @@ function Login() {
         try{
             const response = await api.post('/login',{email,password});
             alert("Bem vindo", response.data.user.name)
-            login(response.data.accessToken)
-            navigate.push("/home")
+            login(response.data.AccessToken)
+            navigate.push("/profile")
             console.log(response);
         } catch(error){
             console.warn(error);
