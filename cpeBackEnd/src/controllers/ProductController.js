@@ -1,9 +1,6 @@
 const { response } = require("express");
 const ProductModel = require("../models/ProductModel");
 
-
-const product = [];
-
 module.exports = {
     async create(request, response) {
         try {
