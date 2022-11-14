@@ -4,8 +4,8 @@
  */
  exports.up = function(knex) {
     return knex.schema.createTable('product', function(table){
-        table.string('product_id').primary().notNullable();
-        table.string('name').notNullable();
+        table.string('product_id').primary();
+        table.string('name').primary().notNullable();
         table.string('description').notNullable();
       });
     };
