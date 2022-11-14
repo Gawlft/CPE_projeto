@@ -12,7 +12,7 @@
     display: flex;
     flex-flow: column;
     align-items: center;
-    max-width: 1120px;
+    max-width: 1100px;
     width: 90%;
     margin: 0 auto;
     background: rgba(56, 102, 65, 0.8);
@@ -24,7 +24,7 @@
   }
   
   .box__items {
-    margin-bottom: 24px;
+    margin-bottom: 50px;
   }
   
   .box__item {
@@ -89,12 +89,12 @@
   }
   
   .box__item__info {
-    padding: 20px 30px 30px;
+    padding: 30px 30px 10px;
     color: #000000;
   }
   
-  .cards__item__text {
-    color: #000000;
+  .box__item__text {
+    color: #ffff;
     font-size: 18px;
     line-height: 24px;
   }
