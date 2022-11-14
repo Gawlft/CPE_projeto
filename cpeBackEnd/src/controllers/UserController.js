@@ -1,15 +1,13 @@
 const { response } = require("express");
 const { Firebaseerr } = require("firebase/app");
 const UserModel = require("../models/UserModel");
-const firebase = require ("../utils/Firebase")
-
-
+const Firebase = require ("../utils/Firebase")
 
 module.exports = {
     async create(request, response) {
         try {
             const newUser = request.body;
-            const uid = await firebase.createNewUser(newUser.email, newUser.password);
+            const uid = await Firebase.createNewUser(newUser.email, newUser.password);
             delete newUser.password;
             newUser.firebase_id = uid;
             const result = await UserModel.create(newUser);
