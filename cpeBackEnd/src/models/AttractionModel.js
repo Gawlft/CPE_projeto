@@ -17,6 +17,12 @@ module.exports = {
         return result;
     },
 
+    async getAll(){
+        const result = await connection("attraction")
+            .select("*");
+        return result;
+    },
+
     async update(attraction_id, attraction){
         const result = await connection("attraction")
             .where(attraction_id)
