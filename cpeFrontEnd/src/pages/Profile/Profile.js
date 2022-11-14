@@ -48,7 +48,7 @@ function Profile() {
                         <div className="escolhidosBox">
                             <img src="/images/icon-park-solid_fireworks.png" alt="fireworks icon" width="35" height="35">
                                 </img>
-                            <h2>Atraações Favoritas</h2>
+                            <h2>Atrações Favoritas</h2>
                         </div>
                         <div className="perfilbuttons">
                             <button type="button">Casa da Nonna</button>
