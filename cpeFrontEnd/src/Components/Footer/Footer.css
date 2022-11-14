@@ -7,6 +7,7 @@
 body{
     height: 100vh;
     background-color: #F2E8CF;
+    margin-bottom: 1em;
     }
 
 .footerBox{
@@ -26,9 +27,9 @@ body{
 }
 .midiaBox{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
-    gap: 2vw;
+    gap: 1vw;
 
 }
 @media screen and (max-width:960px){
