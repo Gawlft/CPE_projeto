@@ -7,7 +7,8 @@ module.exports = {
             email: Joi.string().email().required(),
             birthdate: Joi.date().required(),
             address: Joi.string().required(),
-            bio: Joi.string().optional()
+            bio: Joi.string().optional(),
+            password: Joi.string().required,
 
         })
     }),

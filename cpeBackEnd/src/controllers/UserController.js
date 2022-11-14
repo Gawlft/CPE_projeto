@@ -12,7 +12,8 @@ module.exports = {
            
             const uid = await Firebase.createNewUser(user.email, user.password);
 
-
+            delete user.password;
+            user.firebase_id=uid;
 
             const result = await UserModel.create(newUser);
             return response.status(200).json(result)
