@@ -1,5 +1,6 @@
 const { response } = require("express");
 const ProductModel = require("../models/ProductModel");
+const { getAll } = require("./AttractionController");
 
 module.exports = {
     async create(request, response) {
@@ -28,6 +29,25 @@ module.exports = {
                 
                 if(result === 0){
                     return response.status(400).json({notification:"product_id not found"});
+                }
+    
+                return response.status(200).json({
+                    notification: "product GET operation successful",
+                    data: result
+                });
+                    
+        } catch (err) {
+            console.warn("Getting product failed:", err);
+            return response.status(500).json({notification:"internal server err trying to get product"});
+        }
+    },
+
+    async getAll(response){
+        try {    
+                const result = await ProductModel.getAll();
+                
+                if(result === 0){
+                    return response.status(400).json({notification:"No products found"});
                 }
     
                 return response.status(200).json({

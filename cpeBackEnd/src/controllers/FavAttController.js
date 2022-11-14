@@ -38,7 +38,7 @@ module.exports = {
             return response.status(500).json({notification:"internal server error trying to get FavAtt"});
         }
     },
-
+    
     async delete(request, response){
         try {
             const {FavAtt_id} = request.params;

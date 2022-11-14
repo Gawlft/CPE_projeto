@@ -12,6 +12,10 @@ module.exports = {
             attraction_id: Joi.string().required(),
         }),
     }),
+    getAll: celebrate({
+        [Segments.PARAMS]: Joi.object().keys({
+        }),
+    }),
     update: celebrate({
         [Segments.PARAMS]: Joi.object().keys({
             attraction_id: Joi.string().required(),

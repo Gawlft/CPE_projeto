@@ -44,6 +44,25 @@ module.exports = {
         }
     },
 
+    async getAll(response){
+        try {    
+                const result = await AttractionModel.getAll();
+                
+                if(result === 0){
+                    return response.status(400).json({notification:"No attraction found"});
+                }
+    
+                return response.status(200).json({
+                    notification: "attraction GET operation successful",
+                    data: result
+                });
+                    
+        } catch (err) {
+            console.warn("Getting attraction failed:", err);
+            return response.status(500).json({notification:"internal server err trying to get attraction"});
+        }
+    },
+
 
     async update(request, response){
         try {
