@@ -6,12 +6,28 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Party from "./pages/Party";
 import Header from "./Components/Header";
+import { isAuthenticated } from "./services/auth";
+
+const PrivateRoute = ({ component: Component, ...rest }) => (
+    <Route
+      {...rest}
+      render={props =>
+        isAuthenticated() ? (
+          <Component {...props} />
+        ) : (
+          <Redirect to={{ pathname: "/login", state: { from: props.location } }} />
+        )
+      }
+    />
+  );
+
+
 
 function Def_routes(){
     return (
         <BrowserRouter>
             <Routes>
-                <Route path ="profile" element = {<Profile/>}/>
+                <PrivateRoute path ="profile" element = {<Profile/>}/>
                 <Route path ="home" element = {<Home/>}/>
                 <Route path ="login" element = {<Login/>}/>
                 <Route path="register" element = {<Register/>}/>

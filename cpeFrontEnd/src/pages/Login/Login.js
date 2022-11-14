@@ -7,6 +7,7 @@ import Header from "../../Components/Header/Header"
 import Footer from "../../Components/Footer/Footer"
 import api from "../../services/api"
 import "./Login.css";
+import{login} from "../../services/auth"
 
 
 function Login() {
@@ -14,11 +15,12 @@ function Login() {
     const[password, setPassword] = useState();
     const navigate = useNavigate();
 
-    async function login(e){
+    async function handleLogin(e){
         e.preventDefault();
         try{
             const response = await api.post('/login',{email,password});
             alert("Bem vindo", response.data.user.name)
+            login(response.data.accessToken)
             navigate.push("/home")
             console.log(response);
         } catch(error){
@@ -58,7 +60,7 @@ function Login() {
                     </Form>
                     <p></p>
                     <p></p>
-                    <Button className="btn-custom" variant="flat" onClick={login}>Entrar</Button>{' '}
+                    <Button className="btn-custom" variant="flat" onClick={handleLogin}>Entrar</Button>{' '}
             </div>
             </div>
         </div>
