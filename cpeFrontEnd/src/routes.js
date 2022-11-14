@@ -23,11 +23,11 @@ function Def_routes(){
             <Routes>
                 <Route element = {<PrivateRoute/>}>
                   <Route path ="profile" element= {<Profile/>}/>
+                  <Route path= "party" element= {<Party/>}/>
                 </Route>
                 <Route path ="home" element = {<Home/>}/>
                 <Route path ="login" element = {<Login/>}/>
                 <Route path="register" element = {<Register/>}/>
-                <Route path= "party" element = {<Party/>}/>
                 <Route path= "header" element = {<Header/>}/>
             </Routes>
         </BrowserRouter>

@@ -1,5 +1,5 @@
 import React from "react";
-import {useState} from 'react';
+import {useContext, useState} from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import {useNavigate} from "react-router-dom"
@@ -8,12 +8,14 @@ import Footer from "../../Components/Footer/Footer"
 import api from "../../services/api"
 import "./Login.css";
 import{login} from "../../services/auth"
+import { LoginContext } from "../../Context/LoginContext";
 
 
 function Login() {
     const[email, setEmail] = useState();
     const[password, setPassword] = useState();
     const navigate = useNavigate();
+    // const { signIn } = useContext(LoginContext);
 
     async function handleLogin(e){
         e.preventDefault();
@@ -21,7 +23,7 @@ function Login() {
             const response = await api.post('/login',{email,password});
             alert("Bem vindo", response.data.user.name)
             login(response.data.AccessToken)
-            navigate.push("/profile")
+            navigate("/profile")
             console.log(response);
         } catch(error){
             console.warn(error);
