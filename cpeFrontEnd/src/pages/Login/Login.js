@@ -10,7 +10,7 @@ import "./Login.css";
 
 
 function Login() {
-    const[email, setEmail] = useSate();
+    const[email, setEmail] = useState();
     const[password, setPassword] = useState();
     const navigate = useNavigate();
 
