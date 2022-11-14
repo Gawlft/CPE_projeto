@@ -1,0 +1,84 @@
+.containerHeader{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.navbar1{
+  background-color: #F2E8CF !important;
+  flex-direction: row;
+  font-size: 30px;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+
+}
+
+.navbar1 a {
+  list-style: none;
+  text-decoration: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  color: black;
+}
+
+.buttons{
+  display: flex;
+  justify-content: flex-end;
+  gap: 50px;
+
+}
+
+.opts{
+  display: flex;
+  justify-content: flex-start;
+  width: calc(95% - 489px);
+  gap: 50px;
+}
+
+.login-bttn{
+  background-color: #386641 !important;
+  border-radius: 40px !important;
+  width: 106px;
+  height: 45.56px;
+  left: 1271px;
+  top: 16.23px;
+  align-content: right;
+  margin-right: 40px;
+
+}
+
+.register-bttn{
+  background-color: #DBDBDB !important;
+  border-radius: 40px !important;
+  width: 176px;
+  height: 45.56px;
+
+
+}
+
+@media screen and (max-width:960px){
+  .home-container > h1 {
+      font-size: 70px;
+      margin-top: -150px;
+
+}
+}
+@media screen and (max-width:768px) {
+  .home-container > h1 {
+      font-size: 50px;
+      margin-top: -1500px;
+
+}
+  .home-container > p {
+      font-size: 30px ;
+  }
+}
