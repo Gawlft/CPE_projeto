@@ -1,24 +1,39 @@
-const {v4 : uuidv4} = require ('uuid');
 const connection = require("../database/connection");
+const { v4 : uuidv4 } = require('uuid');
 
 module.exports = {
-    async create(user){
-        const product_id = uuidv4();
-        product.product_id = product_id;
-        const result = await connection("user").insert(user);
-        return result;
-    },
-    async getById({ user_id }) {
-        const result = await connection("user").where({user_id }).select("*");
-        return result;
+    async create(user) {
+        const user_id = uuidv4();
 
+        user.user_id = user_id;
+        await connection("user").insert(user);
+        
+        return user_id;
     },
-    async updateById({user_id, user}){
-        const result = await connection("user").where(user_id).update(user);
+
+    async getById({user_id}){
+        const result = await connection("user")
+            .where({user_id})    
+            .select("*");
         return result;
     },
-    async deleteById(user_id){
+    
+    async getByFields(fields) {
+        const result = await connection("user")
+        .where(fields)
+        .select("*")
+        return result;
+    },
+
+    async update(user_id, user){
+        const result = await connection("user")
+            .where(user_id)
+            .update(user);
+        return result;
+    },
+
+    async delete(user_id){
         const result = await connection("user").where({user_id}).delete();
         return result;
-    }
+    },
 };

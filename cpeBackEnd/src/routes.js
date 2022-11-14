@@ -16,6 +16,9 @@ const FavProdValidator = require("./validators/FavProdValidator");
 const FavAttController = require("./controllers/FavAttController");
 const FavAttValidator = require("./validators/FavAttValidator");
 
+const SessionController = require("./controllers/SessionController");
+const auth = require("./middlewares/authentication")
+
 
 routes.get("/user/:user_id", UserValidator.getById, UserController.getById);
 routes.post("/user", UserValidator.create, UserController.create);
