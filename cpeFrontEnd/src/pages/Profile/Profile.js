@@ -9,7 +9,7 @@ function Profile() {
             <Header />
             <div className="perfilBox">
                 <div className="infoBox">
-                    <img src="/images/pol_icon 1.png" alt="perfil icon" width="266" height="259">
+                    <img src="/images/blank_picture.jpg" alt="perfil icon" width="266" height="259">
                         </img>
                     <div className="informaçoespessoaisBox">
                         <img src="/images/arroba.png" alt="arroba icon" width="25" height="25">
