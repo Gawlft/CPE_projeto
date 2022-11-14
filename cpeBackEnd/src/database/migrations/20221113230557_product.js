@@ -5,8 +5,6 @@
  exports.up = function(knex) {
     return knex.schema.createTable('product', function(table){
         table.string('product_id').primary().notNullable();
-        table.string('user_id').notNullable();
-        table.foreign("user_id").references("user_id").inTable("user").onDelete("cascade");
         table.string('name').notNullable();
         table.string('description').notNullable();
       });
