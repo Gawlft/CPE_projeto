@@ -42,7 +42,7 @@ module.exports = {
         }
     },
 
-    async getAll(response){
+    async getAll(request, response){
         try {    
                 const result = await ProductModel.getAll();
                 
