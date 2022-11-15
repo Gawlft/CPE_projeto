@@ -1,10 +1,59 @@
-import React from "react";
-import { useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import api from "../../services/api"
 import './Culinaria.css'
+import { LoginContext } from "../../Context/LoginContext";
 
 
 function Culinaria() {
+    const [viewProduct, setViewProduct] = useState();
+    const [products, setProducts] = useState();
+    const { token } = useContext(LoginContext);
+
+    useEffect(() => {
+        if (token) {
+          api
+            .get("/product", {
+              headers: {
+                "Content-Type": "application/json",
+                authorization: `Bearer ${token}`,
+              },
+            })
+            .then((response) => {
+              const data = response.data;
+    
+              setProducts(data);
+            });
+        }
+      }, [token]);
+
+      function handleClick(product) {
+        setViewProduct(product);
+      }
+    
+      function handleClose() {
+        setViewProduct();
+      }
+    
+      function handleSave(product) {
+        const newProducts = [...products];
+    
+        let i = 0;
+        for (i; i < products.length; i++) if (products[i].product_id === product.product_id) break;
+    
+        const fieldsToUpdate = { ...product };
+        delete fieldsToUpdate.user_id;
+    
+        api.put(`/product/${product.product_id}`, fieldsToUpdate, {
+          headers: {
+            "Content-Type": "application/json",
+            authorization: `Bearer ${token}`,
+          },
+        });
+    
+        newProducts[i] = product;
+        setProducts(newProducts);
+      }
+  
     async function getProduct() {
         try {
             const response = await api.get("/product");

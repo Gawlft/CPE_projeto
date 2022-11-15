@@ -27,13 +27,13 @@ routes.put("/user/:user_id", UserValidator.update, UserController.update);
 routes.delete("/user/:user_id", UserValidator.delete, UserController.delete);
 
 routes.get("/product/:product_id", ProductValidator.getById, ProductController.getById);
-routes.get("/product/", ProductValidator.getAll,auth.authenticateToken,ProductController.getAll);
+routes.get("/product", ProductValidator.getAll,auth.authenticateToken,ProductController.getAll);
 routes.post("/product", ProductValidator.create, ProductController.create);
 routes.put("/product/:product_id", ProductValidator.update, ProductController.update);
 routes.delete("/product/:product_id", ProductValidator.delete, ProductController.delete);
 
 routes.get("/attraction/:attraction_id", AttractionValidator.getById, AttractionController.getById);
-routes.get("/attraction/", AttractionValidator.getAll,auth.authenticateToken,AttractionController.getAll);
+routes.get("/attraction", AttractionValidator.getAll,auth.authenticateToken,AttractionController.getAll);
 routes.post("/attraction", AttractionValidator.create, AttractionController.create);
 routes.put("/attraction/:attraction_id", AttractionValidator.update, AttractionController.update);
 routes.delete("/attraction/:attraction_id", AttractionValidator.delete, AttractionController.delete);
