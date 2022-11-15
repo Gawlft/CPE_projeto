@@ -13,6 +13,10 @@ module.exports = {
             product_id: Joi.string().required(),
         }),
     }),
+    getAll: celebrate({
+        [Segments.PARAMS]: Joi.object().keys({
+        }),
+    }),
     update: celebrate({
         [Segments.PARAMS]: Joi.object().keys({
             product_id: Joi.string().required(),

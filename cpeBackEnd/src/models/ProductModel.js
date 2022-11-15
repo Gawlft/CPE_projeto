@@ -18,7 +18,7 @@ module.exports = {
     },
 
     async getAll(){
-        const result = await connection("attraction")
+        const result = await connection("product")
         .select("*");
         return result;
 

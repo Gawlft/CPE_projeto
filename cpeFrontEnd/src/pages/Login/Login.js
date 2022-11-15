@@ -8,7 +8,7 @@ import Footer from "../../Components/Footer/Footer"
 import api from "../../services/api"
 import "./Login.css";
 import{login} from "../../services/auth"
-import { LoginContext } from "../../Context/LoginContext";
+// import { LoginContext } from "../../Context/LoginContext";
 
 
 function Login() {

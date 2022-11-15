@@ -1,7 +1,21 @@
 import React from "react";
+import { useEffect } from "react";
+import api from "../../../services/api"
 import './Capelleti.css'
 
+
 function Capelleti(){
+    async function getId(){
+        try {
+            const response = await api.get("/product");
+            console.log(response);
+        } catch (error){
+            console.warn(error);
+        }
+    }
+    useEffect(() => {
+        getId();
+    }, [])
     return(
         <div className="alimentoBox">
                     <div className="favoritosBox">               
