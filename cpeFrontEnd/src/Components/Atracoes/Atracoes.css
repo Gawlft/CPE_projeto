@@ -1,0 +1,32 @@
+.atracoesBox{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    /* gap:1vh ; */
+    text-align: center;
+}
+.atracaoDivisoes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap:2vh ; 
+    text-align: center;
+    align-items: center;
+    }
+    
+.atracaoBox{
+    background-color: #386641;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1vh;
+    color: white;
+    margin-bottom: 1em;
+}
+.textBox{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    /* gap:1vh ; */
+    text-align: center;
+}
