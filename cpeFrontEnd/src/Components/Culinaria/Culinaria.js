@@ -5,73 +5,67 @@ import { LoginContext } from "../../Context/LoginContext";
 
 
 function Culinaria() {
-    const [viewProduct, setViewProduct] = useState();
-    const [products, setProducts] = useState();
-    const { token } = useContext(LoginContext);
+    // const [viewProduct, setViewProduct] = useState();
+    // const [products, setProducts] = useState();
+    // const { token } = useContext(LoginContext);
 
-    useEffect(() => {
-        if (token) {
-          api
-            .get("/product", {
-              headers: {
-                "Content-Type": "application/json",
-                authorization: `Bearer ${token}`,
-              },
-            })
-            .then((response) => {
-              const data = response.data;
+    // useEffect(() => {
+    //     if (token) {
+    //       api
+    //         .get("/product", {
+    //           headers: {
+    //             "Content-Type": "application/json",
+    //             authorization: `Bearer ${token}`,
+    //           },
+    //         })
+    //         .then((response) => {
+    //           const data = response.data;
     
-              setProducts(data);
-            });
-        }
-      }, [token]);
+    //           setProducts(data);
+    //         });
+    //     }
+    //   }, [token]);
 
-      function handleClick(product) {
-        setViewProduct(product);
-      }
+    //   function handleClick(product) {
+    //     setViewProduct(product);
+    //   }
     
-      function handleClose() {
-        setViewProduct();
-      }
+    //   function handleClose() {
+    //     setViewProduct();
+    //   }
     
-      function handleSave(product) {
-        const newProducts = [...products];
+    //   function handleSave(product) {
+    //     const newProducts = [...products];
     
-        let i = 0;
-        for (i; i < products.length; i++) if (products[i].product_id === product.product_id) break;
+    //     let i = 0;
+    //     for (i; i < products.length; i++) if (products[i].product_id === product.product_id) break;
     
-        const fieldsToUpdate = { ...product };
-        delete fieldsToUpdate.user_id;
+    //     const fieldsToUpdate = { ...product };
+    //     delete fieldsToUpdate.user_id;
     
-        api.put(`/product/${product.product_id}`, fieldsToUpdate, {
-          headers: {
-            "Content-Type": "application/json",
-            authorization: `Bearer ${token}`,
-          },
-        });
+    //     api.put(`/product/${product.product_id}`, fieldsToUpdate, {
+    //       headers: {
+    //         "Content-Type": "application/json",
+    //         authorization: `Bearer ${token}`,
+    //       },
+    //     });
     
-        newProducts[i] = product;
-        setProducts(newProducts);
-      }
+    //     newProducts[i] = product;
+    //     setProducts(newProducts);
+    //   }
   
-    async function getProduct() {
-        try {
-            const response = await api.get("/product");
-            // setProducts([...response])
-            console.log(response.data);
-        } catch (error) {
-            console.warn(error);
-        }
-    }
-    useEffect(() => {
-        getProduct();
-    }, [])
-
-
-    
-
-
-
+    // async function getProduct() {
+    //     try {
+    //         const response = await api.get("/product");
+    //         // setProducts([...response])
+    //         console.log(response.data);
+    //     } catch (error) {
+    //         console.warn(error);
+    //     }
+    // }
+    // useEffect(() => {
+    //     getProduct();
+    // }, [])
 
     return (
         <div className="culinariaBox">
