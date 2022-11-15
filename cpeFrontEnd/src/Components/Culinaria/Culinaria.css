@@ -1,0 +1,27 @@
+.culinariaBox{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    /* gap:1vh ; */
+    text-align: center;
+}
+.culinariaDivisoes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap:2vh ; 
+    text-align: center;
+    align-items: center;
+    
+}
+.alimentoBox{
+    background-color: #386641;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1vh;
+    color: white;
+    width: 400px;
+    height: 530px;
+    align-items: center;
+}

@@ -117,22 +117,22 @@
     /* gap:1vh ; */
     text-align: center;
 }
-.culinariaBox{
+/* .culinariaBox{
     display: flex;
     flex-direction: column;
     /* justify-content: space-between; */
     /* gap:1vh ; */
-    text-align: center;
-}
-.culinariaDivisoes{
+    /* text-align: center; */
+/* } */
+/* .culinariaDivisoes{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     gap:2vh ; 
     text-align: center;
-    align-items: center;
+    align-items: center; */
     
-}
+/* } */ */
 /* .alimentoBox{
     background-color: #386641;
     display: flex;

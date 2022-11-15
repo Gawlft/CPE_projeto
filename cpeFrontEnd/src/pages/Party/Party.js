@@ -2,10 +2,7 @@ import React from "react";
 import "./Party.css";
 import Header from "../../Components/Header/Header"
 import Footer from "../../Components/Footer/Footer"
-import Polenta from "../../Components/Culinaria/Polenta/Polenta"
-import Macarrao from "../../Components/Culinaria/Macarrao/Macarrao"
-import Linguica from "../../Components/Culinaria/Linguica/Linguica"
-import Capelleti from "../../Components/Culinaria/Capelleti/Capelleti"
+import Culinaria from "../../Components/Culinaria/Culinaria"
 
  
 function Party() {
@@ -97,15 +94,12 @@ Ferramentas como machado, “grupião”, foice e cangalha faziam parte da rotin
             </div>
             <img src="/images/2022.png" alt="2022 icon"> 
             </img>
-        </div>
-        <div className="culinariaBox">
+        {/* </div> */}
+        {/* <div className="culinariaBox">
             <h2>Culinária</h2>
-            <div className="culinariaDivisoes">
-                <Polenta/>
-                <Macarrao/>
-                <Linguica/>
-                <Capelleti/>
-            </div> 
+            <div className="culinariaDivisoes"> */}
+                <Culinaria/>
+            {/* </div>  */}
         </div>
         <Footer/>
         </div>
