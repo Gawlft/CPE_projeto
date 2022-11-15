@@ -17,6 +17,13 @@ function Culinaria() {
     useEffect(() => {
         getProduct();
     }, [])
+
+
+    
+
+
+
+
     return (
         <div className="culinariaBox">
             <h2>Culinária</h2>
