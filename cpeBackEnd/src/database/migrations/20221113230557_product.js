@@ -7,6 +7,7 @@
         table.string('product_id').primary();
         table.string('name').primary().notNullable();
         table.string('description').notNullable();
+        table.string('product_img').notNullable();
       });
     };
 

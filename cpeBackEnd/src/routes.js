@@ -29,7 +29,7 @@ routes.delete("/user/:user_id", UserValidator.delete, UserController.delete);
 routes.get("/product/:product_id", ProductValidator.getById, ProductController.getById);
 routes.get("/product", ProductValidator.getAll,auth.authenticateToken,ProductController.getAll);
 routes.post("/product", ProductValidator.create, ProductController.create);
-routes.put("/product/:product_id", ProductValidator.update, ProductController.update);
+routes.put("/product/:product_id", ProductValidator.updateById, ProductController.updateById);
 routes.delete("/product/:product_id", ProductValidator.delete, ProductController.delete);
 
 routes.get("/attraction/:attraction_id", AttractionValidator.getById, AttractionController.getById);

@@ -7,6 +7,7 @@
         table.string('attraction_id').primary().notNullable();
         table.string('name').notNullable();
         table.string('description').notNullable();
+        table.string('attraction_img').notNullable();
       });
     };
 /**

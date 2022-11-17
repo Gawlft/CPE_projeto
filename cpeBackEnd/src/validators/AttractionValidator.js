@@ -5,6 +5,7 @@ module.exports = {
         [Segments.BODY]: Joi.object().keys({
             name: Joi.string().required(),
             description: Joi.string().required(),
+            attraction_img: Joi.string().required(),
         }),
     }),
     getById: celebrate({

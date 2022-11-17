@@ -62,7 +62,7 @@ module.exports = {
     },
 
 
-    async update(request, response){
+    async updateById(request, response){
         try {
             const {product_id} = request.params;
             const newproduct = request.body;

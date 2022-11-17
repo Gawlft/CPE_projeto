@@ -1,11 +1,9 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, {useEffect, useState } from "react";
 import api from "../../services/api"
 import './Culinaria.css'
-import { LoginContext } from "../../Context/LoginContext";
 
 
 function Culinaria() {
-    const [viewProduct, setViewProduct] = useState();
     const [products, setProducts] = useState([]);
 
     async function getProduct() {
@@ -33,7 +31,7 @@ function Culinaria() {
                       <img src="/images/cbranco.png" alt="coraçao icon" width="20" height="20">
                       </img>
                   </div>
-                  <img src="/images/polenta frita.png" alt="polenta icon" width="300" height="300">
+                  <img src={product.product_img}alt="polenta icon" width="300" height="300">
                   </img>
                   <h6>{product.description}</h6>
               </div></>

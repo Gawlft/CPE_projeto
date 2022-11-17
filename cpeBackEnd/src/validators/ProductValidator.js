@@ -5,7 +5,7 @@ module.exports = {
         [Segments.BODY]: Joi.object().keys({
             name: Joi.string().required(),
             description: Joi.string().required(),
-            // product_id : Joi.string().required()
+            product_img : Joi.string().required()
         }),
     }),
     getById: celebrate({
@@ -17,13 +17,14 @@ module.exports = {
         [Segments.PARAMS]: Joi.object().keys({
         }),
     }),
-    update: celebrate({
+    updateById: celebrate({
         [Segments.PARAMS]: Joi.object().keys({
             product_id: Joi.string().required(),
         }),
         [Segments.BODY]: Joi.object().keys({
             name: Joi.string().optional(),
-            description: Joi.string().email().optional()
+            description: Joi.string().optional(),
+            product_img : Joi.string().optional()
     })
     .min(1),
 }),

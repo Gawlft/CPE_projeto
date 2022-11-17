@@ -8,14 +8,14 @@ import Footer from "../../Components/Footer/Footer"
 import api from "../../services/api"
 import "./Login.css";
 import{login} from "../../services/auth"
-// import { LoginContext } from "../../Context/LoginContext";
+import { LoginContext } from "../../Context/LoginContext";
 
 
 function Login() {
     const[email, setEmail] = useState();
     const[password, setPassword] = useState();
     const navigate = useNavigate();
-    // const { signIn } = useContext(LoginContext);
+    const signIn = useContext(LoginContext);
 
     async function handleLogin(e){
         e.preventDefault();
@@ -30,6 +30,13 @@ function Login() {
             alert(error.message);
         }
     }
+        // const data = await signIn(email, password);
+        // if (data.accessToken) {
+        //   alert("Bem vindo!\n" + email);
+        //   navigate("home");
+        // } else {
+        //   alert("Dados incorretos");
+        // }
     
     return (
         <div className="loginPage">
