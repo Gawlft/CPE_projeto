@@ -23,7 +23,6 @@ function RegisterBox() {
             alert("Registrado com sucesso! Seja bem-vindo!")
             login(response.data.AccessToken)
             navigate("/profile")
-            console.log(response);
         } catch(error){
             console.warn(error);
             alert(error.message);
