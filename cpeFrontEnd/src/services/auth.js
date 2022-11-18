@@ -17,10 +17,10 @@ export const setSession = email => {
 sessionStorage.setItem(USER_EMAIL, email);
 };
 
-export const getSession = () =>{sessionStorage.getItem(USER_EMAIL); }
+export const getSession = () => sessionStorage.getItem(USER_EMAIL); 
 
-export const setUserId = user => {
-  sessionStorage.setItem(USER_ID, user);
+export const setUserId = user_id => {
+  sessionStorage.setItem(USER_ID, user_id);
   };
   
-export const getUserId = () => { sessionStorage.getItem(USER_ID); }
+  export const getUserId = () => sessionStorage.getItem(USER_ID);
