@@ -71,25 +71,6 @@ function RegisterBox() {
             />
           </Form.Group>
         </Form>
-
-        <div className="dropdown">
-          <button class="dropbtn">Comidas Favoritas</button>
-          <div class="dropdown-content">
-            <a href="#">Polenta</a>
-            <a href="#">Macarrão</a>
-            <a href="#">Linguiça</a>
-            <a href="#">Capeletti</a>
-          </div>
-        </div>
-
-        <div className="dropdownAtt">
-          <button class="dropbtnAtt">Atrações Favoritas</button>
-          <div class="dropdown-contentAtt">
-            <a href="#">Casa da Nonna</a>
-            <a href="#">Tombo da Polenta</a>
-            <a href="#">Paiol do Nonno</a>
-          </div>
-        </div>
       </div>
       <Button
         className="btn-customRegister"
