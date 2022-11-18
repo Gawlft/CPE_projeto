@@ -3,9 +3,11 @@ import "./Profile.css";
 import Header from "../../Components/Header/Header";
 import { getUserId } from "../../services/auth";
 import api from "../../services/api";
+import { useNavigate } from "react-router-dom";
 
 function Profile() {
   const [userInfos, setUserInfo] = useState([]);
+  const navigate = useNavigate();
 
   async function findById() {
     try {
@@ -13,6 +15,18 @@ function Profile() {
       const response = await api.get("/user/" + userId);
       // console.log(response.data.data[0]);
       setUserInfo(response.data.data[0]);
+    } catch (error) {
+      console.warn(error);
+    }
+  }
+
+  async function deleteAcc() {
+    try {
+      const userId = getUserId("@id");
+      const response = await api.delete("/user/" + userId);
+      alert("Conta excluída! Faça login em outro usuário.");
+      navigate("/login");
+      console.log(response);
     } catch (error) {
       console.warn(error);
     }
@@ -47,6 +61,7 @@ function Profile() {
             height="259"
           ></img>
           <div className="informaçoespessoaisBox">
+            <h3>{userInfos.name}</h3>
             <img
               src="/images/arroba.png"
               alt="arroba icon"
@@ -63,14 +78,14 @@ function Profile() {
             <h3>{normalDate}.</h3>
           </div>
           <div className="perfilbuttons">
-            <button type="button">EXCLUIR CONTA</button>
+            <button type="button" onClick={deleteAcc}>
+              EXCLUIR CONTA
+            </button>
             <p></p>
           </div>
         </div>
         <div className="curiosidadeBox">
-          <div className="nomeBox">
-            <h3>{userInfos.name}</h3>
-          </div>
+          <div className="nomeBox"></div>
           <div className="comidasFavoritasBox">
             <div className="escolhidosBox">
               <img
@@ -82,12 +97,13 @@ function Profile() {
               <h2>Comidas Favoritas</h2>
             </div>
             <div className="perfilbuttons">
-              <button type="button">Polenta Frita</button>
-              <p></p>
-              <button type="button">Capeletti</button>
-              <p></p>
-              <button type="button">Linguiça</button>
-              <p></p>
+              {/* <button type="button">Polenta Frita</button> */}
+              <h4>Polenta Frita</h4>
+              <hr></hr>
+              <h4>Capelleti</h4>
+              <hr></hr>
+              <h4>Linguiça</h4>
+              <hr></hr>
             </div>
           </div>
           <div className="atracoesFavoritas">
@@ -101,12 +117,12 @@ function Profile() {
               <h2>Atrações Favoritas</h2>
             </div>
             <div className="perfilbuttons">
-              <button type="button">Casa da Nonna</button>
-              <p></p>
-              <button type="button">Tombo da Polenta</button>
-              <p></p>
-              <button type="button">Shows</button>
-              <p></p>
+              <h4>Casa</h4>
+              <hr></hr>
+              <h4>Eita!</h4>
+              <hr></hr>
+              <h4>Oras!</h4>
+              <hr></hr>
             </div>
           </div>
         </div>
