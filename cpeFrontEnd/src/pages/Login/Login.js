@@ -21,6 +21,8 @@ function Login() {
     e.preventDefault();
     try {
       const response = await api.post("/login", { email, password });
+      console.log(email, password);
+      console.log(response);
       setUser(response.data);
       setUserId(response.data.user[0].user_id);
       alert("Bem vindo");

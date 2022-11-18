@@ -8,6 +8,18 @@ import { useNavigate } from "react-router-dom";
 function Profile() {
   const [userInfos, setUserInfo] = useState([]);
   const navigate = useNavigate();
+  const [products, setProducts] = useState([]);
+  const [favorites, setFavorites] = useState([]);
+  const userId = getUserId("@id");
+
+  async function getFavorite() {
+    try {
+      const response = await api.get("/favoriteProd/", userId);
+      setFavorites(response.data.data);
+    } catch (error) {
+      console.warn(error);
+    }
+  }
 
   async function findById() {
     try {
@@ -97,7 +109,6 @@ function Profile() {
               <h2>Comidas Favoritas</h2>
             </div>
             <div className="perfilbuttons">
-              {/* <button type="button">Polenta Frita</button> */}
               <h4>Polenta Frita</h4>
               <hr></hr>
               <h4>Capelleti</h4>
@@ -117,11 +128,11 @@ function Profile() {
               <h2>Atrações Favoritas</h2>
             </div>
             <div className="perfilbuttons">
-              <h4>Casa</h4>
+              <h4>Casa da Nonna</h4>
               <hr></hr>
-              <h4>Eita!</h4>
+              <h4>Paiol do Nonno</h4>
               <hr></hr>
-              <h4>Oras!</h4>
+              <h4>Tombo da Polenta</h4>
               <hr></hr>
             </div>
           </div>
