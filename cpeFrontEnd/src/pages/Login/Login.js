@@ -7,8 +7,8 @@ import Header from "../../Components/Header/Header"
 import Footer from "../../Components/Footer/Footer"
 import api from "../../services/api"
 import "./Login.css";
-import{login} from "../../services/auth"
-// import { LoginContext } from "../../Context/LoginContext";
+import{login, setSession} from "../../services/auth"
+import { LoginContext } from "../../Context/LoginContext";
 
 
 function Login() {
@@ -21,10 +21,11 @@ function Login() {
         e.preventDefault();
         try{
             const response = await api.post('/login',{email,password});
-            alert("Bem vindo", response.data.user.name)
-            login(response.data.AccessToken)
+            alert("Bem vindo")
+            setSession(email);
+            login(response.data.AccessToken);
             navigate("/profile")
-            console.log(response);
+            console.log(email);
         } catch(error){
             console.warn(error);
             alert(error.message);

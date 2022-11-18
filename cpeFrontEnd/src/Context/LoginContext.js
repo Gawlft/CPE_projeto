@@ -2,7 +2,7 @@ import React, { createContext } from "react";
 import { useState } from "react";
 import api from "../services/api";
 
-export const LoginContext = createContext();
+export const LoginContext = createContext({});
 
 function LoginContextProvider({ children }) {
   const [token, setToken] = useState();

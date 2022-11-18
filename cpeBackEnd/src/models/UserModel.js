@@ -17,6 +17,18 @@ module.exports = {
             .select("*");
         return result;
     },
+    async getByEmail({email}){
+        const result = await connection("user")
+            .where({email})    
+            .select("*");
+        return result;
+    },
+
+    async getAll(){
+        const result = await connection("user")
+            .select("*");
+        return result;
+    },
     
     async getByFields(fields) {
         const result = await connection("user")

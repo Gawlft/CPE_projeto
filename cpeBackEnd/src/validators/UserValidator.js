@@ -11,7 +11,16 @@ module.exports = {
     }),
     getById: celebrate({
         [Segments.BODY]: Joi.object().keys({
-            user_id: Joi.string().required()
+            firebase_id: Joi.string().required()
+        })
+    }),
+    getAll: celebrate({
+        [Segments.BODY]: Joi.object().keys({
+        })
+    }),
+    getByEmail: celebrate({
+        [Segments.BODY]: Joi.object().keys({
+            email: Joi.string().required()
         })
     }),
     update: celebrate({

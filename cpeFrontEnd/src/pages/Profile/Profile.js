@@ -1,9 +1,32 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./Profile.css";
 import Header from "../../Components/Header/Header"
+import { LoginContext } from "../../Context/LoginContext";
+import api from "../../services/api";
+import{setSession, getSession} from "../../services/auth"
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+
+
+
 
 
 function Profile() {
+
+    async function getUser() {
+        try {
+            const userEmail = getSession();
+            console.log(userEmail);
+            const response = await api.get("/user");
+            // console.log(response);
+        } catch (error) {
+            console.warn(error);
+        }
+    }
+
+    useEffect (() =>{
+        getUser();
+    },[])
+
     return (
         <div className="base">
             <Header />

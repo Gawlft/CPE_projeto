@@ -28,7 +28,6 @@ function RegisterBox() {
             alert(error.message);
         }
     }    
-
     return (
 
         // {/* <div> */}

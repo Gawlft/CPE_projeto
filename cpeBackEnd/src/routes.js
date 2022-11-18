@@ -22,6 +22,8 @@ const SessionController = require("./controllers/SessionController");
 routes.post("/login", SessionController.signIn);
 
 routes.get("/user/:user_id", UserValidator.getById, UserController.getById);
+routes.get("/user/:email", UserValidator.getByEmail, UserController.getByEmail);
+routes.get("/user", UserValidator.getAll, UserController.getAll);
 routes.post("/user", UserValidator.create, UserController.create);
 routes.put("/user/:user_id", UserValidator.update, UserController.update);
 routes.delete("/user/:user_id", UserValidator.delete, UserController.delete);
