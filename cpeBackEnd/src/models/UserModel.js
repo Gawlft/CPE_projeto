@@ -11,15 +11,15 @@ module.exports = {
         return user_id;
     },
 
-    async getById({user_id}){
+    async getById(user_id){
         const result = await connection("user")
-            .where({user_id})    
+            .where(user_id)    
             .select("*");
         return result;
     },
-    async getByEmail({email}){
+    async getByEmail(email){
         const result = await connection("user")
-            .where({email})    
+            .where(email)
             .select("*");
         return result;
     },
