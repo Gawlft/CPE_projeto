@@ -24,4 +24,3 @@ export const setUserId = user => {
   };
   
 export const getUserId = () => { sessionStorage.getItem(USER_ID); }
-  x'

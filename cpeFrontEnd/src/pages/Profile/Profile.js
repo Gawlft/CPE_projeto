@@ -1,22 +1,19 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./Profile.css";
 import Header from "../../Components/Header/Header"
-import { LoginContext } from "../../Context/LoginContext";
-import api from "../../services/api";
-import{setSession, getSession} from "../../services/auth"
-import { getAuth, onAuthStateChanged } from "firebase/auth";
+import{getUserId} from "../../services/auth"
 
 
 
 
 
 function Profile() {
+    const[userId, getUserIdState] = useState();
 
-    async function getUser() {
+    async function findById () {
         try {
-            const userEmail = getSession();
-            console.log(userEmail);
-            const response = await api.get("/user");
+            const userId = getUserId("@id");
+            console.log(userId);
             // console.log(response);
         } catch (error) {
             console.warn(error);
@@ -24,7 +21,7 @@ function Profile() {
     }
 
     useEffect (() =>{
-        getUser();
+        findById();
     },[])
 
     return (

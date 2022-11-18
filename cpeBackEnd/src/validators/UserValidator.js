@@ -11,7 +11,7 @@ module.exports = {
     }),
     getById: celebrate({
         [Segments.BODY]: Joi.object().keys({
-            firebase_id: Joi.string().required()
+            id: Joi.string().required()
         })
     }),
     getAll: celebrate({

@@ -7,25 +7,27 @@ import Header from "../../Components/Header/Header"
 import Footer from "../../Components/Footer/Footer"
 import api from "../../services/api"
 import "./Login.css";
-import{login, setSession} from "../../services/auth"
+import{login, setSession, setUserId} from "../../services/auth"
 import { LoginContext } from "../../Context/LoginContext";
 
 
 function Login() {
     const[email, setEmail] = useState();
     const[password, setPassword] = useState();
+    const[user, setUser] = useState();
+    // const[id, setId] = useState();
     const navigate = useNavigate();
-    // const signIn = useContext(LoginContext);
 
     async function handleLogin(e){
         e.preventDefault();
         try{
             const response = await api.post('/login',{email,password});
+            setUser(response.data)
+            setUserId(response.data.user[0].user_id);
             alert("Bem vindo")
             setSession(email);
             login(response.data.AccessToken);
             navigate("/profile")
-            console.log(email);
         } catch(error){
             console.warn(error);
             alert(error.message);
